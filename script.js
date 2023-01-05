@@ -29,9 +29,9 @@ function isPalidrome() {
 function spliceString(startOfStr, endOfStr, stringToCheck) {
 
     let isPalidrome = document.getElementById('isPalidrome');
-    console.log("position to splice", startOfStr, endOfStr , "string", stringToCheck);
+    console.log("position to slice", startOfStr, endOfStr , "string", stringToCheck);
     let stringToCheckArray = stringToCheck.toString().split('');
-    let stringCheckTrue = stringToCheckArray.splice(startOfStr, endOfStr).join('');
+    let stringCheckTrue = stringToCheckArray.slice(startOfStr, endOfStr+1).join('');
 
     if (stringCheckTrue.length > 2) {
         console.log("Palidrome is", stringCheckTrue)
